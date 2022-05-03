@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Import the component -->
+  <script
+    type="module"
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+  ></script>
+
+  <style>
+    model-viewer {
+      width: 1280px;
+      height: 720px;
+    }
+  </style>
+  <model-viewer
+    bounds="tight"
+    enable-pan
+    src="https://cdn.glitch.global/1eaa681b-9d45-48f9-b4b6-0787186b6ad6/SpecGlossVsMetalRough.glb?v=1651539806798"
+    ar
+    ar-modes="scene-viewer webxr quick-look"
+    camera-controls
+    poster="https://cdn.glitch.global/1eaa681b-9d45-48f9-b4b6-0787186b6ad6/poster.png?v=1651539784524"
+    shadow-intensity="1.85"
+    auto-rotate
+    shadow-softness="1"
+  >
+    <div class="progress-bar hide" slot="progress-bar">
+      <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">View in your space</button>
+    <div id="ar-prompt">
+      <img src="https://modelviewer.dev/shared-assets/icons/hand.png" />
+    </div>
+  </model-viewer>
+</html>
